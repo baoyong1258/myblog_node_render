@@ -1,0 +1,19 @@
+<div class="nav-setting">
+    <div class="dropdown show">
+        <a class="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          菜单
+        </a>
+      
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <% if(user) { %>
+            <a href="/posts?author=<%= user._id %>" class="dropdown-item">个人主页</a>
+            <div class="w-100"></div>
+            <a href="/posts/create" class="dropdown-item">发表文章</a>
+            <a href="/signout" class="dropdown-item">登出</a>
+          <% } else { %>
+            <a href="/signin" class="dropdown-item">登录</a>
+            <a href="/signup" class="dropdown-item">注册</a>
+          <% } %>
+        </div>
+    </div>
+</div>
